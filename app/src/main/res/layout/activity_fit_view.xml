@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/fit_tv_false"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="1.在Android Studio中安装ScreenMatch插件，如图：2.在项目的默认values文件夹中需要一份dimens.xml文件3.插件安装好后，在项目的任意目录或文件上右键，选择ScreenMatch选项。如图"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fit_tv_true"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="wrap_content"
+        android:background="@color/my_gray"
+        android:text="1.在Android Studio中安装ScreenMatch插件，如图：2.在项目的默认values文件夹中需要一份dimens.xml文件3.插件安装好后，在项目的任意目录或文件上右键，选择ScreenMatch选项。如图"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fit_tv_false"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

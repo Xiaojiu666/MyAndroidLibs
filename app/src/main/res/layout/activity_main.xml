@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaojiu.studylibs.TouchEvent.MyLinerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axu="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xiaojiu.studylibs.TouchEvent.Mybutton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试" />
+
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FF8247"
+        android:padding="20dip"
+        android:text="按钮1"
+        android:textColor="#ffffff"
+        android:textSize="20dip"
+        axu:layout_position="left" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8B0A50"
+        android:padding="10dip"
+        android:text="按钮2222222222222"
+        android:textColor="#ffffff"
+        android:textSize="18dip"
+        axu:layout_position="right" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#7CFC00"
+        android:padding="15dip"
+        android:text="按钮333333"
+        android:textColor="#ffffff"
+        android:textSize="20dip"
+        axu:layout_position="bottom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#1E90FF"
+        android:padding="10dip"
+        android:text="按钮4"
+        android:textColor="#ffffff"
+        android:textSize="15dip"
+        axu:layout_position="rightAndBottom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#191970"
+        android:padding="15dip"
+        android:text="按钮5"
+        android:textColor="#ffffff"
+        android:textSize="20dip"
+
+        axu:layout_position="center" />-->
+
+
+</com.xiaojiu.studylibs.TouchEvent.MyLinerLayout>
