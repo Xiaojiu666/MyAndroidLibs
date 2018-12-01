@@ -11,7 +11,7 @@ public class Pen implements Parcelable {
     private String mColor;
     private String mPenType;
 
-    protected Pen(Parcel in) {
+    public Pen(Parcel in) {
         mColor = in.readString();
         mPenType = in.readString();
     }

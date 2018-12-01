@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.test.myselfview.R;
 import com.xiaojiu.studylibs.GuideItemBean;
-import com.xiaojiu.studylibs.adapter.BaseRecyclerAdapter;
+import com.xiaojiu.studylibs.adapter.GuideRecyclerAdapter;
 import com.xiaojiu.studylibs.algorithm.AlgorithmAaddBActivity;
 import com.xiaojiu.studylibs.algorithm.AlgorithmTailZeroActivity;
 import com.xiaojiu.studylibs.base.BaseAppCompatActivity;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 
-public class GuideAlgorithmActivity extends BaseAppCompatActivity implements BaseRecyclerAdapter.OnItemCliclkListener {
+public class GuideAlgorithmActivity extends BaseAppCompatActivity implements GuideRecyclerAdapter.OnItemCliclkListener {
     @BindView(R.id.my_toolbar)
     Toolbar myToolbar;
     @BindView(R.id.guide_alagorithm_recyceler_view)
@@ -24,7 +24,7 @@ public class GuideAlgorithmActivity extends BaseAppCompatActivity implements Bas
     private String[] titleNames = new String[]{"A+B问题", "尾部的0"};
     private String[] titleDescs = new String[]{"给出两个整数 a 和 b , 求他们的和。\n使用位运算", "设计一个算法，计算出n阶乘中尾部零的个数"};
     private ArrayList<GuideItemBean> guideItemBeans;
-    private BaseRecyclerAdapter mGuideRecyclerAdapter;
+    private GuideRecyclerAdapter mGuideRecyclerAdapter;
 
     @Override
     protected void initOnClick() {
@@ -45,7 +45,7 @@ public class GuideAlgorithmActivity extends BaseAppCompatActivity implements Bas
     @Override
     protected void initView() {
         initToobar(myToolbar);
-        mGuideRecyclerAdapter = new BaseRecyclerAdapter(this, guideItemBeans);
+        mGuideRecyclerAdapter = new GuideRecyclerAdapter(this, guideItemBeans);
         mGuideAlagorithmRecycelerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mGuideAlagorithmRecycelerView.setAdapter(mGuideRecyclerAdapter);
     }

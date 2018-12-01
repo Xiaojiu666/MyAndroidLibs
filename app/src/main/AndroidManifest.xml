@@ -34,6 +34,9 @@
         <activity android:name="com.xiaojiu.studylibs.GuideActivity.GuideAlgorithmActivity" />
         <activity android:name="com.xiaojiu.studylibs.algorithm.AlgorithmAaddBActivity" />
         <activity android:name="com.xiaojiu.studylibs.algorithm.AlgorithmTailZeroActivity" />
+        <activity android:name="com.xiaojiu.studylibs.CommanCode.QRsacnActivity" />
+        <activity android:name="com.xiaojiu.studylibs.view.RecycleViewCommonActivity" />
+        <activity android:name="com.xiaojiu.studylibs.CommanCode.RxJavaCommonActivity" />
         <activity
             android:name="com.xiaojiu.studylibs.view.SecondActivity"
             android:launchMode="standard"></activity>
@@ -42,6 +45,9 @@
             android:launchMode="singleInstance">
 
         </activity>
+
+        <service android:name="com.xiaojiu.studylibs.service.DownloadService" />
+
     </application>
 
 </manifest>

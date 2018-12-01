@@ -22,7 +22,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2018/1/9 0009.
  */
 
-public abstract class BaseAppCompatActivity extends AppCompatActivity{
+public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
 
     private ProgressDialog progDialog;
@@ -34,7 +34,9 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getResLayout());
+        if (getResLayout() != 0) {
+            setContentView(getResLayout());
+        }
         ButterKnife.bind(this);
         mContext = getBaseContext();
         initData();

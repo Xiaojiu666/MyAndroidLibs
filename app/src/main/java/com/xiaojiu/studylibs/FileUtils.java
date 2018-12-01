@@ -8,7 +8,6 @@ import java.io.File;
 /**
  * Created by Administrator on 2018/2/1 0001.
  */
-
 public class FileUtils {
 
     public static String picPath = Environment.getExternalStorageDirectory()

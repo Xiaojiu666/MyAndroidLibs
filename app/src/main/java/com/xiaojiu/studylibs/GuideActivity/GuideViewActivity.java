@@ -7,25 +7,26 @@ import android.support.v7.widget.Toolbar;
 
 import com.test.myselfview.R;
 import com.xiaojiu.studylibs.GuideItemBean;
-import com.xiaojiu.studylibs.adapter.BaseRecyclerAdapter;
+import com.xiaojiu.studylibs.adapter.GuideRecyclerAdapter;
 import com.xiaojiu.studylibs.base.BaseAppCompatActivity;
 import com.xiaojiu.studylibs.view.CustomViewActivity;
 import com.xiaojiu.studylibs.view.FitAcitivity;
+import com.xiaojiu.studylibs.view.RecycleViewCommonActivity;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 
-public class GuideViewActivity extends BaseAppCompatActivity implements BaseRecyclerAdapter.OnItemCliclkListener {
+public class GuideViewActivity extends BaseAppCompatActivity implements GuideRecyclerAdapter.OnItemCliclkListener {
 
     @BindView(R.id.guide_view_recyceler_view)
     RecyclerView mViewGuideRecycelerView;
     @BindView(R.id.my_toolbar)
     Toolbar myToolbar;
-    private String[] titleNames = new String[]{"自定义View介绍", "自定ViewLibs库", "适配问题"};
-    private String[] titleDescs = new String[]{"自定义VIew的介绍，源码分析", "一些网上搜集、开发中使用到的库", "使用插件+多分辨率下不同的demens进行适配"};
+    private String[] titleNames = new String[]{"自定义View介绍", "自定ViewLibs库", "适配问题", "RecyclerView使用"};
+    private String[] titleDescs = new String[]{"自定义VIew的介绍，源码分析", "一些网上搜集、开发中使用到的库", "使用插件+多分辨率下不同的demens进行适配", "包含了recyclerView的下拉刷新，上拉加载的使用"};
     private ArrayList<GuideItemBean> guideItemBeans;
-    private BaseRecyclerAdapter mGuideRecyclerAdapter;
+    private GuideRecyclerAdapter mGuideRecyclerAdapter;
 
     @Override
     protected void initOnClick() {
@@ -46,7 +47,7 @@ public class GuideViewActivity extends BaseAppCompatActivity implements BaseRecy
     @Override
     protected void initView() {
         initToobar(myToolbar);
-        mGuideRecyclerAdapter = new BaseRecyclerAdapter(this, guideItemBeans);
+        mGuideRecyclerAdapter = new GuideRecyclerAdapter(this, guideItemBeans);
         mViewGuideRecycelerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mViewGuideRecycelerView.setAdapter(mGuideRecyclerAdapter);
     }
@@ -64,6 +65,11 @@ public class GuideViewActivity extends BaseAppCompatActivity implements BaseRecy
                 break;
             case 2:
                 startActivity(new Intent(GuideViewActivity.this, FitAcitivity.class));
+                break;
+            case 3:
+                startActivity(new Intent(GuideViewActivity.this, RecycleViewCommonActivity.class));
+                break;
+            default:
                 break;
         }
     }
